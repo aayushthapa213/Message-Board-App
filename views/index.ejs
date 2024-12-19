@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>Messages</h1>
+    <% messages.forEach((message,index)=>{ %>
+    <h2><%= message.user%></h2>
+    <p><%= message.text%></p>
+    <p><%= message.added%></p>
+    <button><a href="/message?position=<%= index %>">View Message</a></button>
+    <% }) %>
+    <br /><br />
+    <button>
+      <a style="text-decoration: none" href="/new">Add new message</a>
+    </button>
+  </body>
+</html>
